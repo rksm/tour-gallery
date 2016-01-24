@@ -1,4 +1,4 @@
-/*global virtualDom*/
+/*global rendering, virtualDom*/
 
 var h = virtualDom.h;
 
