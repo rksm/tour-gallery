@@ -3,26 +3,27 @@
 var h = virtualDom.h;
 
 var imageFiles = [
-  "/bik-webpage/public/data/DSC00188.120x80.jpg",
-  "/bik-webpage/public/data/DSC00189.120x80.jpg",
-  "/bik-webpage/public/data/DSC00190.120x80.jpg",
-  "/bik-webpage/public/data/DSC00191.120x80.jpg",
-  "/bik-webpage/public/data/DSC00192.120x80.jpg",
-  "/bik-webpage/public/data/DSC00194.120x80.jpg",
-  "/bik-webpage/public/data/DSC00197.120x80.jpg",
-  "/bik-webpage/public/data/DSC00198.120x80.jpg",
-  "/bik-webpage/public/data/DSC00200.120x80.jpg",
-  "/bik-webpage/public/data/DSC00202.120x80.jpg",
-  "/bik-webpage/public/data/DSC00203.120x80.jpg",
-  "/bik-webpage/public/data/DSC00204.120x80.jpg",
-  "/bik-webpage/public/data/DSC00205.120x80.jpg",
-  "/bik-webpage/public/data/DSC00206.120x80.jpg",
-  "/bik-webpage/public/data/DSC00207.120x80.jpg",
-  "/bik-webpage/public/data/DSC00208.120x80.jpg",
-  "/bik-webpage/public/data/DSC00209.120x80.jpg",
-  "/bik-webpage/public/data/DSC00210.120x80.jpg",
-  "/bik-webpage/public/data/DSC00211.120x80.jpg",
-  "/bik-webpage/public/data/DSC00212.120x80.jpg"];
+  "http://localhost:9001/bik-webpage/public/data/DSC00188.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00189.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00190.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00191.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00192.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00194.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00197.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00198.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00200.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00202.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00203.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00204.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00205.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00206.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00207.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00208.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00209.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00210.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00211.120x80.jpg",
+  "http://localhost:9001/bik-webpage/public/data/DSC00212.120x80.jpg"];
+
 function updateHeight(renderState) {
   var full = window.innerHeight;
   var top = 40;

@@ -1,0 +1,14 @@
+{
+  "name": "tour-gallery",
+  "version": "0.1.0",
+  "description": "image gallery creator",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Krahn",
+  "license": "MIT",
+  "dependencies": {
+    "lively.lang": "^0.4.15"
+  }
+}
