@@ -1,6 +1,6 @@
 body {
   font-family: Roboto, sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   color: #333;
   margin: 0;
   height: 100%;
@@ -11,30 +11,59 @@ body {
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 .navbar {
-  position: relative;
   background-color: #DDF;
   height: 5%;
-  min-height: 16px;
-  max-height: 35px;
-  padding: 5px;
+  min-height: 28px;
   width: 100%;
+  text-align: center;
 }
 
 .navbar #location {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5px;
+  position: relative;
+  /*margin-bottom: auto;*/
+  /*margin-top: auto;*/
   height: 28px;
-  width: 95%;
+  /*line-height: 35px;*/
+  width: 80%;
+}
+
+.navbar #location-btn {
+  /*width: 10%;*/
 }
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
+.labeled-checkbox {
+  display: inline;
+}
+
 .labeled-checkbox label {
+  font-size: small;
   cursor: pointer;
   margin-left: 5px;
+}
+
+.image-controls {
+  padding: 5px;
+  background-color: #DFD;
+  height: 25%;
+  min-height: 80px;
+}
+
+.image-controls .description {
+  width: 100%;
+  height: 50%;
+}
+
+.description textarea {
+  /*width: 100%;*/
+  max-width: 800px;
+  height: 100%;
+}
+
+.image-controls .labeled-checkbox {
+  margin-left: 10px;
 }
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
@@ -43,18 +72,10 @@ body {
   background-color: #FDD;
   height: 70%;
   padding: 5px;
+  min-height: 100px;
+  overflow: auto;
 }
 
-.image-controls {
-  padding: 5px;
-  background-color: #DFD;
-  height: 25%;
-}
-
-.image-controls #description {
-  width: 100%;
-  height: 50%;
-}
 
 .image-list-item {
   margin: 4px;
@@ -63,4 +84,13 @@ body {
 
 .image-list-item.selected {
   outline: 3px solid orange;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+@media (max-height: 500px) {
+body {
+  overflow-y: auto;
+}
+
 }
