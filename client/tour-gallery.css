@@ -8,6 +8,10 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 .navbar {
@@ -58,8 +62,19 @@ body {
 
 .description textarea {
   /*width: 100%;*/
+  width: 70%;
   max-width: 800px;
   height: 100%;
+}
+
+.description .info-box {
+  text-align: center;
+  display: inline-box;
+  position: relative;
+  top: -30px;
+  height: 30px;
+  font-size: large;
+  width: 70%;
 }
 
 .image-controls .labeled-checkbox {

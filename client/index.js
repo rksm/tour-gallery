@@ -96,6 +96,8 @@ var imageList = {
 
 }
 
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 var imageControls = {
 
   toggleExport: function(renderState, image, shouldExport) {
@@ -116,11 +118,49 @@ var imageControls = {
           checked: image ? image.includeInExport : false
         }),
         h("label", {checked: false, "htmlFor": "should-export-image"}, ["export"])]),
-      h("div.description", [h("textarea", image ? image.description : "")])
+      imageDescription.render(renderState, image)
     ]);
   }
 
 }
+
+var imageDescription = {
+
+  hideNotification: function(renderState) {
+    console.log("hide");
+    renderState.imageInfo.notification = "";
+    renderState.dirty = true;
+  },
+
+  showSaveConfirmation: function(renderState) {
+    console.log("show");
+    renderState.imageInfo.notification = "saved";
+    renderState.dirty = true;
+  },
+
+  saveInput: function(renderState, input, image) {
+    this.hideNotification(renderState);
+    lively.lang.fun.debounceNamed("save-descr-" + image.url, 400,
+      () => {
+        this.showSaveConfirmation(renderState);
+        setTimeout(() => this.hideNotification(renderState), 3*1000);
+      })();
+  },
+
+  render: function(renderState, image) {
+    return h("div.description", [
+      h("textarea", {
+        disabled: !image,
+        oninput: (evt) => image && this.saveInput(renderState, evt.target.value, image),
+      }, image ? image.description : ""),
+      h("div.info-box", {
+        className: renderState.imageInfo.notification ? "" : "hidden",
+      }, renderState.imageInfo.notification || "")]);
+  }
+
+}
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 var navbar = {
 
@@ -134,6 +174,8 @@ var navbar = {
   }
 
 }
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 var mainWindow = {
 
